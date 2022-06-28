@@ -1,0 +1,244 @@
+html {
+    background-color: #EFEFEF;
+    font-family: 'Encode Sans Semi Expanded', sans-serif, Arial;
+    /*700, bold, 600 semibold, 500 regular */
+    font-size: 24px;
+}
+
+a:link,
+a:visited {
+    color: #808080;
+    transition: color 0.5s ease-out ;
+}
+
+a:hover
+ {
+    color:#646FD6;
+    transition: color 0.2s ease-in ;
+}
+
+#main-container {
+    background-color: #EFEFEF;   
+    padding: 20px 20px;
+}
+
+header {
+    display: flex;
+    height: 80px;     
+}
+
+#parallelogram-container {    
+    display: flex;
+    background-color: #e1e1e1;
+    flex-grow: 2;
+    border-radius: 10px;
+}
+
+#parallelogram {
+    display: flex;
+    align-items: center;
+    position: relative;
+    transform: skew(-30deg);
+    background-color: #e1e1e1;
+    border-radius: 10px;
+    margin: 0 -25px 0 30px;
+    flex: 1;
+    /* box-shadow: 3px 3px 7px 1px #b3b3b3; */
+
+}
+
+#parallelogram:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    background-color: #e1e1e1;
+    box-shadow: 5px 5px 5px -3px #b3b3b3;
+    border-radius: 5px;
+  }
+
+#title {
+    color: #646FD6;   
+    font-weight: 600; /*semibold*/
+    font-size: 1.2rem;
+    transform: skew(30deg);
+    margin: 0 0 0 70px;
+}
+
+#parallelogram-container2 {
+	flex-grow: 6;
+	background-color: #e1e1e1;
+	margin: 0 0 0 4%;
+	border-radius: 10px;
+    position:relative;
+    box-shadow: 5px 5px 5px -3px #b3b3b3;
+
+}
+   
+
+#parallelogram-container2:before { 
+    content: "";
+    position: absolute;
+    width: 6%;
+    height: 80px;
+    top: 0px;
+    left: -2px;
+    z-index: ;
+    background-color: #e1e1e1;
+    box-shadow: -13px 8px 5px -5px #b3b3b3;
+    border-radius: 5px;
+    transform: skew(-30deg);   
+  } 
+  
+
+
+#parallelogram2 {
+	transform: skew(-30deg);
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	height: 100%;
+	background: #e1e1e1;
+	margin: 0 30px 0 -22px;
+	border-radius: 10px;
+    
+}
+
+.menu__list__item {
+    transform: skew(30deg);
+    padding: 0 30px;
+    margin: 0 2%;
+    color: #808080;      
+}
+
+
+.menu__list__item a {
+    font-size: 0.75rem;    
+}
+
+main {
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: #e1e1e1;
+    box-shadow: 3px 3px 4px -1px #b3b3b3;
+}
+
+section {
+    height: calc(100vh - 130px); 
+}
+
+article {
+    display: grid; 
+    height: 100%;  
+    /* padding: 80px 100px; */
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+#border-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 320px;
+    width: 320px;   
+    clip-path: circle();
+    background-color: #c3c2c2;
+    background: linear-gradient(90deg, #646FD65C, transparent);
+    grid-column: 3/6;
+    grid-row: 4/11;
+    justify-self: center;
+    align-self: start;
+}
+
+#img-container {    
+    height: 300px;
+    width: 300px;   
+    clip-path: circle();    
+    
+}
+
+#avatar {
+    max-height: 100%;
+}
+
+#description-container {    
+    grid-column: 8/11;
+    grid-row: 5/9;
+    /* background-color: red; */
+    /* height: 100%; */
+    align-self: center;
+}
+
+#description-container h3 {
+    font-size: 1.4rem;
+    color: #646FD6; 
+    /* color:red; */
+    
+}
+
+
+#description-container h3:first-child {
+    animation-name: showHideWelcome;
+    animation-duration: 3s;  
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+   
+}
+
+#description-container h3:nth-child(2) {
+    animation-name: showName;
+    animation-duration: 3s;  
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+}
+
+@keyframes showHideWelcome {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;       
+    }
+
+    60% {
+        opacity: 100;
+    }   
+
+    100% {
+        opacity: 0;         
+    }
+}
+
+@keyframes showName {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 100   
+    }
+}
+
+#description-container h4 {
+    color: #808080;   
+    font-weight: 500; 
+    font-size: 0.9rem;
+    animation-name: showDeveloper;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+
+}
+
+@keyframes showDeveloper {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
